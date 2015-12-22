@@ -1,0 +1,33 @@
+<features name="${project.artifactId}-${project.version}">
+
+    <feature name="calculator" install="manual" version="${project.version}"
+             description="Calculator implementations.">
+
+        <bundle>mvn:com.connexta/calculator-api/${project.version}</bundle>
+        <bundle>mvn:com.connexta/a-calc/${project.version}</bundle>
+        <bundle>mvn:com.connexta/b-calc/${project.version}</bundle>
+        <bundle>mvn:com.connexta/c-calc/${project.version}</bundle>
+        <bundle>mvn:com.connexta/d-calc/${project.version}</bundle>
+        <bundle>mvn:com.connexta/e-calc/${project.version}</bundle>
+        <bundle>mvn:com.connexta/f-calc/${project.version}</bundle>
+        <bundle>mvn:com.connexta/g-calc/${project.version}</bundle>
+        <bundle>mvn:com.connexta/h-calc/${project.version}</bundle>
+        <bundle>mvn:com.connexta/i-calc/${project.version}</bundle>
+    </feature>
+
+    <feature name="consumer" install="manual" version="${project.version}"
+             description="Consumer implementations to demonstrate good/bad behaviors.">
+
+        <bundle>mvn:com.connexta/consumers-api/${project.version}</bundle>
+        <bundle>mvn:com.connexta/embed-library/${project.version}</bundle>
+        <bundle>mvn:com.connexta/class-cast/${project.version}</bundle>
+        <bundle>mvn:com.connexta/embed-bundle/${project.version}</bundle>
+    </feature>
+
+    <feature name="bundle-demo" install="auto" version="${project.version}"
+             description="Installs the calculator sample application with its good and bad implementations.">
+
+        <feature>calculator</feature>
+        <feature>consumer</feature>
+    </feature>
+</features>
