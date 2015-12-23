@@ -6,15 +6,16 @@
 
     <parent>
         <groupId>com.connexta</groupId>
-        <artifactId>bundle-demo</artifactId>
+        <artifactId>consumers</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>consumers</artifactId>
+    <artifactId>service</artifactId>
     <packaging>pom</packaging>
 
     <modules>
-        <module>service</module>
-        <module>commands</module>
+        <module>consumers-api</module>
+        <module>embed-library</module>
+        <module>by-contract</module>
     </modules>
 </project>

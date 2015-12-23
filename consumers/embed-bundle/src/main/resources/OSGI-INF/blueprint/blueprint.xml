@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<blueprint xmlns="http://www.osgi.org/xmlns/blueprint/v1.0.0">
-    <command-bundle xmlns="http://karaf.apache.org/xmlns/shell/v1.0.0">
-
-        <command name="bundle/embedbundle">
-            <action class="com.connexta.embedbundle.EmbedBundleCommand"/>
-        </command>
-    </command-bundle>
-</blueprint>

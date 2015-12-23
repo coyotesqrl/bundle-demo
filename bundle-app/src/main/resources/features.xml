@@ -1,26 +1,35 @@
 <features name="${project.artifactId}-${project.version}">
 
     <feature name="calculator" install="manual" version="${project.version}"
-             description="Calculator implementations.">
+             description="Calculator API and service implementations.">
 
         <bundle>mvn:com.connexta/calculator-api/${project.version}</bundle>
-        <bundle>mvn:com.connexta/a-calc/${project.version}</bundle>
-        <bundle>mvn:com.connexta/b-calc/${project.version}</bundle>
-        <bundle>mvn:com.connexta/c-calc/${project.version}</bundle>
-        <bundle>mvn:com.connexta/d-calc/${project.version}</bundle>
-        <bundle>mvn:com.connexta/e-calc/${project.version}</bundle>
-        <bundle>mvn:com.connexta/f-calc/${project.version}</bundle>
-        <bundle>mvn:com.connexta/g-calc/${project.version}</bundle>
-        <bundle>mvn:com.connexta/h-calc/${project.version}</bundle>
-        <bundle>mvn:com.connexta/i-calc/${project.version}</bundle>
+        <bundle>mvn:com.connexta/rootclass/${project.version}</bundle>
+        <bundle>mvn:com.connexta/rootclass-withembed/${project.version}</bundle>
+        <bundle>mvn:com.connexta/local-concrete/${project.version}</bundle>
+        <bundle>mvn:com.connexta/library-class/${project.version}</bundle>
+        <bundle>mvn:com.connexta/contract/${project.version}</bundle>
     </feature>
 
-    <feature name="consumer" install="manual" version="${project.version}"
-             description="Consumer implementations to demonstrate good/bad behaviors.">
+    <feature name="consumer-services" install="manual" version="${project.version}"
+             description="Consumer API and service implementations to demonstrate good/bad behaviors.">
 
         <bundle>mvn:com.connexta/consumers-api/${project.version}</bundle>
         <bundle>mvn:com.connexta/embed-library/${project.version}</bundle>
+        <bundle>mvn:com.connexta/by-contract/${project.version}</bundle>
+    </feature>
+
+    <feature name="consumer-commands" install="manual" version="${project.version}"
+             description="Consumer commands to demonstrate good/bad behaviors.">
+
         <bundle>mvn:com.connexta/class-cast/${project.version}</bundle>
+        <bundle>mvn:com.connexta/use-bundles-export1/${project.version}</bundle>
+        <bundle>mvn:com.connexta/contract-command/${project.version}</bundle>
+    </feature>
+
+    <feature name="consumer-bad-commands" install="manual" version="${project.version}"
+             description="Consumer commands that cannot be started.">
+
         <bundle>mvn:com.connexta/embed-bundle/${project.version}</bundle>
     </feature>
 
@@ -28,6 +37,7 @@
              description="Installs the calculator sample application with its good and bad implementations.">
 
         <feature>calculator</feature>
-        <feature>consumer</feature>
+        <feature>consumer-services</feature>
+        <feature>consumer-commands</feature>
     </feature>
 </features>

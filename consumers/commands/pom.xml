@@ -6,15 +6,17 @@
 
     <parent>
         <groupId>com.connexta</groupId>
-        <artifactId>bundle-demo</artifactId>
+        <artifactId>consumers</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>consumers</artifactId>
+    <artifactId>commands</artifactId>
     <packaging>pom</packaging>
 
     <modules>
-        <module>service</module>
-        <module>commands</module>
+        <module>embed-bundle</module>
+        <module>class-cast</module>
+        <module>use-bundles-export1</module>
+        <module>contract-command</module>
     </modules>
 </project>

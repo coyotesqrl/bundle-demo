@@ -14,15 +14,11 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>api</module>
-        <module>a-calc</module>
-        <module>b-calc</module>
-        <module>c-calc</module>
-        <module>d-calc</module>
-        <module>e-calc</module>
-        <module>f-calc</module>
-        <module>g-calc</module>
-        <module>h-calc</module>
-        <module>i-calc</module>
+        <module>calculator-api</module>
+        <module>rootclass</module>
+        <module>rootclass-withembed</module>
+        <module>local-concrete</module>
+        <module>library-class</module>
+        <module>contract</module>
     </modules>
 </project>
