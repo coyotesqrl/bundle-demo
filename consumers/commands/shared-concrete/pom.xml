@@ -6,12 +6,12 @@
 
     <parent>
         <groupId>com.connexta</groupId>
-        <artifactId>consumers</artifactId>
+        <artifactId>commands</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>embed-bundle</artifactId>
-    <name>Consumer Service :: Command :: Parameter by embedded bundle</name>
+    <artifactId>shared-concrete</artifactId>
+    <name>Consumer Service :: Command :: Parameter by Concrete Export</name>
     <packaging>bundle</packaging>
 
     <dependencies>
@@ -29,7 +29,7 @@
 
         <dependency>
             <groupId>com.connexta</groupId>
-            <artifactId>rootclass-withembed</artifactId>
+            <artifactId>exported-concrete</artifactId>
             <version>${project.version}</version>
         </dependency>
 
@@ -51,7 +51,7 @@
                         <Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
                         <Bundle-Name>${project.name}</Bundle-Name>
 
-                        <Embed-Dependency>rootclass-withembed</Embed-Dependency>
+                        <Private-Package>com.connexta.exported.common</Private-Package>
                     </instructions>
                 </configuration>
             </plugin>
@@ -66,5 +66,5 @@
         </plugins>
     </build>
 
-
+    
 </project>

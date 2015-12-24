@@ -18,5 +18,6 @@
         <module>class-cast</module>
         <module>use-bundles-export1</module>
         <module>contract-command</module>
+        <module>shared-concrete</module>
     </modules>
 </project>

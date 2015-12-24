@@ -20,5 +20,6 @@
         <module>local-concrete</module>
         <module>library-class</module>
         <module>contract</module>
+        <module>exported-concrete</module>
     </modules>
 </project>

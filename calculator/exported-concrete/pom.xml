@@ -6,12 +6,12 @@
 
     <parent>
         <groupId>com.connexta</groupId>
-        <artifactId>consumers</artifactId>
+        <artifactId>calculator</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>embed-bundle</artifactId>
-    <name>Consumer Service :: Command :: Parameter by embedded bundle</name>
+    <artifactId>exported-concrete</artifactId>
+    <name>Calculator Service :: Returns exported concrete class</name>
     <packaging>bundle</packaging>
 
     <dependencies>
@@ -19,24 +19,6 @@
             <groupId>com.connexta</groupId>
             <artifactId>calculator-api</artifactId>
             <version>${project.version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>com.connexta</groupId>
-            <artifactId>consumers-api</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>com.connexta</groupId>
-            <artifactId>rootclass-withembed</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.apache.karaf.shell</groupId>
-            <artifactId>org.apache.karaf.shell.console</artifactId>
-            <version>2.4.3</version>
         </dependency>
     </dependencies>
 
@@ -51,7 +33,7 @@
                         <Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
                         <Bundle-Name>${project.name}</Bundle-Name>
 
-                        <Embed-Dependency>rootclass-withembed</Embed-Dependency>
+                        <Export-Package>com.connexta.exported.common</Export-Package>
                     </instructions>
                 </configuration>
             </plugin>
@@ -66,5 +48,5 @@
         </plugins>
     </build>
 
-
+    
 </project>

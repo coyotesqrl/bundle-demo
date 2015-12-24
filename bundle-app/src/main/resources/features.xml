@@ -9,6 +9,7 @@
         <bundle>mvn:com.connexta/local-concrete/${project.version}</bundle>
         <bundle>mvn:com.connexta/library-class/${project.version}</bundle>
         <bundle>mvn:com.connexta/contract/${project.version}</bundle>
+        <bundle>mvn:com.connexta/exported-concrete/${project.version}</bundle>
     </feature>
 
     <feature name="consumer-services" install="manual" version="${project.version}"
@@ -17,6 +18,7 @@
         <bundle>mvn:com.connexta/consumers-api/${project.version}</bundle>
         <bundle>mvn:com.connexta/embed-library/${project.version}</bundle>
         <bundle>mvn:com.connexta/by-contract/${project.version}</bundle>
+        <bundle>mvn:com.connexta/import-concrete/${project.version}</bundle>
     </feature>
 
     <feature name="consumer-commands" install="manual" version="${project.version}"
@@ -25,6 +27,7 @@
         <bundle>mvn:com.connexta/class-cast/${project.version}</bundle>
         <bundle>mvn:com.connexta/use-bundles-export1/${project.version}</bundle>
         <bundle>mvn:com.connexta/contract-command/${project.version}</bundle>
+        <bundle>mvn:com.connexta/shared-concrete/${project.version}</bundle>
     </feature>
 
     <feature name="consumer-bad-commands" install="manual" version="${project.version}"
