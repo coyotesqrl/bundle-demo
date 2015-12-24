@@ -25,7 +25,6 @@
                     <instructions>
                         <Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
                         <Bundle-Name>${project.name}</Bundle-Name>
-                        <Export-Package>com.connexta.calculator</Export-Package>
                     </instructions>
                 </configuration>
             </plugin>
