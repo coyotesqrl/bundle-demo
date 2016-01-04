@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<blueprint xmlns="http://www.osgi.org/xmlns/blueprint/v1.0.0">
+    <reference id="calculator" interface="com.connexta.calculator.Calculator"
+               filter="(id=abstract-contract)"
+               availability="mandatory"/>
+
+    <reference id="consumer" interface="com.connexta.consumer.Consumer"
+               filter="(id=by-abstract-contract)"
+               availability="mandatory"/>
+
+    <command-bundle xmlns="http://karaf.apache.org/xmlns/shell/v1.0.0">
+
+        <command name="bundemo/byabscontract">
+            <action class="com.connexta.abstractcontractcommand.CommandImpl">
+                <argument ref="calculator"/>
+                <argument ref="consumer"/>
+            </action>
+        </command>
+    </command-bundle>
+</blueprint>

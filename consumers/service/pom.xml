@@ -17,6 +17,7 @@
         <module>consumers-api</module>
         <module>embed-library</module>
         <module>by-contract</module>
+        <module>by-abstract-contract</module>
         <module>import-concrete</module>
     </modules>
 </project>
