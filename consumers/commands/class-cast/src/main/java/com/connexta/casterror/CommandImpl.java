@@ -1,4 +1,4 @@
-package com.connexta.bundexp;
+package com.connexta.casterror;
 
 import java.util.Optional;
 
@@ -12,15 +12,16 @@ import org.osgi.framework.InvalidSyntaxException;
 
 import com.connexta.calculator.Calculator;
 import com.connexta.consumer.Consumer;
-import com.connexta.localconcrete.Wrapper;
 
-@Command(scope = "bundemo", name = "export1", description = "Use an embedded bundle with a concrete export.")
+@Command(scope = "bundemo", name = "cast", description = "Demonstrate Class cast with shared embeds.")
 @Service
-public class BundleExport1Command implements Action {
+public class CommandImpl implements Action {
     @Reference
     private BundleContext bundleContext;
 
     private Calculator calculator;
+
+    private Consumer consumer;
 
     @Argument(name = "Factor 1", description = "First multiplication factor", index = 0, multiValued = false, required = true)
     protected int factor1;
@@ -31,17 +32,16 @@ public class BundleExport1Command implements Action {
     @Override
     public Object execute() throws Exception {
         initServices();
-        return ((Consumer<Wrapper>) input -> String.format("Class: %s%nValue: %s", input.getClass(),
-                input.toString())).convertToString(
-                (Wrapper) calculator.multiplier(factor1, factor2));
+        return consumer.convertToString(calculator.adder(factor1, factor2));
     }
 
     private void initServices() throws InvalidSyntaxException {
-        if (calculator != null) {
+        if (calculator != null && consumer != null) {
             return;
         }
 
-        calculator = getService(Calculator.class, "(id=local-concrete)");
+        calculator = getService(Calculator.class, "(id=library-class)");
+        consumer = getService(Consumer.class, "(id=embed-library)");
     }
 
     private <T> T getService(Class<T> clazz, String filter) throws InvalidSyntaxException {

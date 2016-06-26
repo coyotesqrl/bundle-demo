@@ -29,8 +29,8 @@ prominent example). Where complex objects need to be passed in or out of a servi
 interface should be defined in the API bundle.
 
 ## How to use this demo ##
-1. Download the `apache-karaf-2.4.3` distribution appropriate to your OS from 
-[Apache](https://karaf.apache.org/index/community/download.html)
+1. Download the `apache-karaf-4.0.x` distribution appropriate to your OS from 
+[Apache](https://karaf.apache.org/download.html)
 2. Unpack and deploy the karaf distro to your environment.
 3. Clone and build this demo.
 4. Copy the resulting KAR file - `bundle-app/target/bundle-app-1.0-SNAPSHOT.kar` - to your karaf 

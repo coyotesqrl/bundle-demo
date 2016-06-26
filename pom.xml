@@ -10,7 +10,8 @@
     <packaging>pom</packaging>
 
     <properties>
-
+        <karaf.version>4.0.5</karaf.version>
+        <osgi.version>6.0.0</osgi.version>
     </properties>
 
     <dependencyManagement>
@@ -53,7 +54,7 @@
                 <plugin>
                     <groupId>org.apache.karaf.tooling</groupId>
                     <artifactId>features-maven-plugin</artifactId>
-                    <version>2.3.8</version>
+                    <version>${karaf.version}</version>
                 </plugin>
 
             </plugins>
